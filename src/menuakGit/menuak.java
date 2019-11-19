@@ -7,7 +7,8 @@ public class menuak {
 	public static void main(String[] args) {
 		int aukera, zenb1, zenb2;
 		
-		double batura, kenketa, biderketa, zatiketa;
+		int batura, kenketa, biderketa, zatiketa, emaitza, faktorial;
+		
 		
 		System.out.println("Sartu zenbaki bat");
 		Scanner scan = new Scanner(System.in);
@@ -15,6 +16,14 @@ public class menuak {
 		System.out.println("Sartu zenbaki bat");
 		Scanner scan1 = new Scanner(System.in);
 		zenb2 = Integer.parseInt(scan1.nextLine());
+		faktorial = zenb1;
+		
+		for(int i = 1; i < zenb1; i++){
+			
+			faktorial = faktorial*i;
+		}
+		
+		
 		
 		batura = zenb1+zenb2;
 		kenketa = zenb1-zenb2;
@@ -22,7 +31,8 @@ public class menuak {
 		zatiketa = zenb1/zenb2;
 		
 		
-		System.out.println("Aukeratu aukera bat \n0- Batura\n1- Kenketa\n2- Biderketa\n3- Zatiketa");
+		
+		System.out.println("Aukeratu aukera bat \n0- Batura\n1- Kenketa\n2- Biderketa\n3- Zatiketa\n4- Lehengo zenbakiaren faktoriala");
 		
 		aukera  = Integer.parseInt(scan.nextLine());
 		
@@ -38,6 +48,9 @@ public class menuak {
 			break;
 		case 3:
 			System.out.println("Zatiketa: " + zatiketa);
+			break;
+		case 4:
+			System.out.println("Faktoriala: " + faktorial);
 			break;
 		default:
 			System.out.println("Agur");
