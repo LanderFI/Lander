@@ -7,7 +7,7 @@ public class menuak {
 	public static void main(String[] args) {
 		int aukera, zenb1, zenb2;
 		
-		int batura, kenketa, biderketa, zatiketa, emaitza, faktorial;
+		
 		
 		
 		System.out.println("Sartu zenbaki bat");
@@ -16,19 +16,12 @@ public class menuak {
 		System.out.println("Sartu zenbaki bat");
 		Scanner scan1 = new Scanner(System.in);
 		zenb2 = Integer.parseInt(scan1.nextLine());
-		faktorial = zenb1;
-		
-		for(int i = 1; i < zenb1; i++){
-			
-			faktorial = faktorial*i;
-		}
+	
 		
 		
 		
-		batura = zenb1+zenb2;
-		kenketa = zenb1-zenb2;
-		biderketa = zenb1*zenb2;
-		zatiketa = zenb1/zenb2;
+		
+		
 		
 		
 		
@@ -38,26 +31,62 @@ public class menuak {
 		
 		switch(aukera){
 		case 0:
-			System.out.println("Batura: "  + batura);
+			batura(zenb1, zenb2);
 			break;
 		case 1:
-			System.out.println("Kenketa: " + kenketa);
+			kenketa(zenb1, zenb2);
 			break;
 		case 2:
-			System.out.println("Biderketa: " + biderketa);
+			biderketa(zenb1, zenb2);
 			break;
 		case 3:
-			System.out.println("Zatiketa: " + zatiketa);
+			zatiketa(zenb1, zenb2);
 			break;
 		case 4:
-			System.out.println("Faktoriala: " + faktorial);
+			faktoriala(zenb1);
 			break;
 		default:
-			System.out.println("Agur");
+			System.out.println("Txarto aukeratu duzu");
 			break;
 		}
 		
 
+	}
+
+	private static void faktoriala(int zenb1) {
+		int faktoriala = zenb1;
+		for(int i = 1; i < zenb1; i++){
+			faktoriala = faktoriala*i;
+		}
+		System.out.println("Faktoriala: " + faktoriala);
+	}
+
+	private static void zatiketa(int zenb1, int zenb2) {
+		int zatiketa;
+		zatiketa = zenb1 / zenb2;
+		System.out.println("Zatiketa: " + zatiketa);
+		
+	}
+
+	private static void biderketa(int zenb1, int zenb2) {
+		int biderketa;
+		biderketa = zenb1 * zenb2;
+		System.out.println("Biderketa: " + biderketa);
+		
+	}
+
+	private static void kenketa(int zenb1, int zenb2) {
+		int kenketa;
+		kenketa = zenb1 - zenb2;
+		System.out.println("Kenketa: " + kenketa);
+		
+	}
+
+	private static void batura(int zenb1, int zenb2) {
+		int batura;
+		batura=zenb1+ zenb2;
+		System.out.println("Batura: " + batura);
+		
 	}
 
 }
